@@ -16,8 +16,8 @@ public:
     Triangle(const Triangle& orig);
     virtual ~Triangle();
 
-    double getArea();
-    double getPerimeter();
+    double getArea() const;
+    double getPerimeter() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Triangle& t);
 
@@ -58,7 +58,6 @@ private:
     double sideC;
 
     void updateSides();
-    double getDistance(const Point& p1, const Point& p2);
 };
 
 #endif	/* TRIANGLE_H */

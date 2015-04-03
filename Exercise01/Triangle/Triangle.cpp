@@ -24,11 +24,11 @@ void Triangle::updateSides() {
     sideC = Point::calculateDistance(A, B);
 }
 
-double Triangle::getPerimeter() {
+double Triangle::getPerimeter() const {
     return sideA + sideB + sideC;
 }
 
-double Triangle::getArea() {
+double Triangle::getArea() const {
     double p = getPerimeter() / 2;
     double area = sqrt(p * (p - sideA)*(p - sideB)*(p - sideC));
     return area;
