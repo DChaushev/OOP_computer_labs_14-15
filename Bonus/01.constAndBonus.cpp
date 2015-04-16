@@ -5,7 +5,7 @@
 //#define token [value]
 //#undef token
 
-//#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 //#ifdef, #ifndef, #if, #endif, #else and #elif
 /*
@@ -17,10 +17,10 @@
 using namespace std;
 
 int addition (int a, int b)
-{ return (a+b); }
+{ return a+b; }
 
 int subtraction (int a, int b)
-{ return (a-b); }
+{ return a-b; }
 
 int operation (int x, int y, int (*functocall)(int,int))
 {
@@ -53,6 +53,7 @@ int main()
      int pluz = operation (50, 8, addition);
      int mainas = operation (50, 8, ptr_to_func);
      cout<<pluz<<' '<<mainas<<endl;
+     cout<<"MAX(3, 4) = "<<MAX(3, 4);
 
      /*
        Also check out some info about dynamic memory (new, delete)
