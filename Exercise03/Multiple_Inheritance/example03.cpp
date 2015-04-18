@@ -16,7 +16,7 @@ public:
         cout << "A constructor" << endl;
     }
 
-    void display() {
+    virtual void display() {
         cout << "A" << endl;
     }
 };
@@ -28,7 +28,7 @@ public:
         cout << "B constructor" << endl;
     }
 
-    void display() {
+    virtual void display() {
         cout << "B" << endl;
     }
 };
@@ -40,7 +40,7 @@ public:
         cout << "C constructor" << endl;
     }
 
-    void display() {
+    virtual void display() {
         cout << "C" << endl;
     }
 };
@@ -63,11 +63,17 @@ public:
  */
 int main(int argc, char** argv) {
 
-    D d;
+    D * dd = new D();
+    dd->display();
+    dd->B::display();
+    dd->C::display();
 
-    d.display();
-    d.B::display();
-    d.C::display();
+
+    B * bd = new D();
+    bd->display();
+    //bd->C::display();
+    
+    //A * ad = new D();
 
     return 0;
 }
