@@ -8,60 +8,34 @@
 #include <iostream>
 #include <string>
 
-#include "Observer.h"
-#include "Observable.h"
+#include "NewsSite.h"
+#include "User.h"
 
 using namespace std;
 
-class MyObserver : public Observer {
-private:
-    string name;
-
-public:
-
-    MyObserver(string name) : name(name) {
-    }
-
-    void notify() {
-        cout << name << " notified!" << endl;
-    }
-
-};
-
-class MyObserverable : public Observable {
-private:
-    string name;
-public:
-
-    MyObserverable(string name) : name(name), Observable() {
-    }
-
-    MyObserverable(string name, const Observable& o) : name(name), Observable(o) {
-    }
-
-    void changeState() {
-        cout << name << " changing state!" << endl;
-        Observable::changeState();
-    }
-
-};
-
 int main() {
 
+    Observable * site = new NewsSite("breakingnews.com");
+    
+    User * user1 = new User("user1");
+    User * user2 = new User("user2");
 
-    Observable* o = new MyObserverable("Observable");
-    Observer* o1 = new MyObserver("Observer 1");
-    Observer* o2 = new MyObserver("Observer 2");
-
-    o->registerObserver(o1);
-    o->registerObserver(o2);
-    o->changeState();
-
-    Observable* newObs = new MyObserverable("new Observable", *o);
-
-    o->unregisterObserver(o1);
-    o->changeState();
-    newObs->changeState();
+    site->registerObserver(user1);
+    site->registerObserver(user2);
+    
+    site->changeState();
+    
+    cout << endl;
+    
+    Observable * site2 = new NewsSite("newSite.com", *site);
+    
+    site->unregisterObserver(user1);
+    site->changeState();
+    
+    cout << endl;
+    
+    site2->changeState();
+    
 
     return 0;
 }
