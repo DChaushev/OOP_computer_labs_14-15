@@ -38,7 +38,3 @@ void Observable::notifyObservers() {
         observers[i]->notify();
 }
 
-void Observable::changeState() {
-    notifyObservers();
-}
-

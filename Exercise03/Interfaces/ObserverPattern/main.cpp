@@ -23,18 +23,18 @@ int main() {
     site->registerObserver(user1);
     site->registerObserver(user2);
     
-    site->changeState();
+    site->notifyObservers();
     
     cout << endl;
     
     Observable * site2 = new NewsSite("newSite.com", *site);
     
     site->unregisterObserver(user1);
-    site->changeState();
+    site->notifyObservers();
     
     cout << endl;
     
-    site2->changeState();
+    site2->notifyObservers();
     
 
     return 0;

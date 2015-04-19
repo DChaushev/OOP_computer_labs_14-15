@@ -44,7 +44,7 @@ public:
         this->year = year;
     }
 
-    void display() {
+    void display() const {
         printf("%02d.%02d.%04d", day, month, year);
     }
 
@@ -77,7 +77,7 @@ public:
         this->minute = minute;
     }
 
-    void display() {
+    void display() const {
         printf("%02d:%02d", hour, minute);
     }
 
@@ -90,7 +90,7 @@ public:
     Date(day, month, year), Time(hour, minute) {
     }
 
-    void display() {
+    void display() const {
         Date::display();
         cout << " ";
         Time::display();
@@ -102,11 +102,13 @@ public:
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    DateTime dt(18, 4, 2015, 17, 5);
-    dt.display();
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//
+//    DateTime dt(18, 4, 2015, 17, 5);
+//    dt.display();
+//    
+//    //const
+//
+//    return 0;
+//}
 

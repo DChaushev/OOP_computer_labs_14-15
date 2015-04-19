@@ -61,20 +61,22 @@ public:
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    D * dd = new D();
-    dd->display();
-    dd->B::display();
-    dd->C::display();
-
-
-    B * bd = new D();
-    bd->display();
-    //bd->C::display();
-    
-    //A * ad = new D();
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//
+//    D * dd = new D();
+//    dd->display();
+//    
+//    
+////    dd->B::display();
+////    dd->C::display();
+//
+//
+////    B * bd = new D();
+////    bd->display();
+//    //bd->C::display();
+//    
+//    //A * ad = new D();
+//
+//    return 0;
+//}
 

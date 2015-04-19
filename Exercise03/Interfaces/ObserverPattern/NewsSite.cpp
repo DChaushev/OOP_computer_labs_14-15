@@ -19,8 +19,8 @@ NewsSite::NewsSite(const NewsSite& orig) : name(orig.name), Observable(orig) {
 NewsSite::~NewsSite() {
 }
 
-void NewsSite::changeState() {
+void NewsSite::notifyObservers() {
     std::cout << name << " has news!" << std::endl;
-    Observable::changeState();
+    Observable::notifyObservers();
 }
 

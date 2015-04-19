@@ -20,7 +20,8 @@ public:
     NewsSite(const NewsSite& orig);
     virtual ~NewsSite();
 
-    void changeState();
+    virtual void notifyObservers();
+
 
 private:
     std::string name;

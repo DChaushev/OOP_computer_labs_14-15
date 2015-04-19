@@ -18,11 +18,10 @@ public:
 
     void registerObserver(Observer * o);
     void unregisterObserver(Observer * o);
-    virtual void changeState();
+    virtual void notifyObservers();
 
 private:
     std::vector<Observer*> observers;
-    void notifyObservers();
 };
 
 #endif	/* OBSERVERABLE_H */
