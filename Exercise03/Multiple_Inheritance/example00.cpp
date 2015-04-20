@@ -24,7 +24,7 @@ public:
         return name;
     }
 
-    void setName(long name) {
+    void setName(string name) {
         this->name = name;
     }
 
@@ -82,16 +82,16 @@ public:
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    Student * s = new Student("Ivan", 61569, 2000.50, "C++");
-
-    cout << s->getName() << endl;
-    cout << s->getFn() << endl;
-    cout << s->getSalary() << endl;
-    cout << s->getTech() << endl;
-
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//
+//    Student * s = new Student("Ivan", 61569, 2000.50, "C++");
+//
+//    cout << s->getName() << endl;
+//    cout << s->getFn() << endl;
+//    cout << s->getSalary() << endl;
+//    cout << s->getTech() << endl;
+//
+//
+//    return 0;
+//}
 

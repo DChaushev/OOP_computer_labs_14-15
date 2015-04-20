@@ -63,10 +63,10 @@ public:
  */
 //int main(int argc, char** argv) {
 //
-//    D * dd = new D();
-//    dd->display();
-//    
-//    
+////    D * dd = new D();
+////    dd->display();
+////    
+////    
 ////    dd->B::display();
 ////    dd->C::display();
 //
@@ -75,7 +75,7 @@ public:
 ////    bd->display();
 //    //bd->C::display();
 //    
-//    //A * ad = new D();
+////    A * ad = new D();
 //
 //    return 0;
 //}

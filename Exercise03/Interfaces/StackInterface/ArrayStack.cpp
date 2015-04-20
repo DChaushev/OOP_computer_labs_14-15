@@ -49,15 +49,14 @@ public:
         if (size == MAX_ELEMENTS) {
             cout << "no space!" << endl;
         } else {
-            elements[size] = x;
-            topElement = size;
+            elements[++topElement] = x;
             size++;
         }
     }
 
     virtual int pop() {
         if (size == 0) {
-            cout << "stack is empty!" << endl;
+            cout << "stack is empty" << endl;
             return NULL;
         } else {
             size--;
@@ -66,11 +65,11 @@ public:
     }
 
     virtual int top() {
-        if (size != 0)
-            return elements[topElement];
-        else {
+        if (size == 0) {
             cout << "stack is empty" << endl;
             return NULL;
+        } else {
+            return elements[topElement];
         }
     }
 

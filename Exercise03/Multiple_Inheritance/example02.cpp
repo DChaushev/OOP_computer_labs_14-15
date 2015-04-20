@@ -16,44 +16,45 @@ private:
 
 public:
 
-    Date(int day, int month, int year) :
-    day(day), month(month), year(year) {
+    Date(int day, int month, int year) {
+        SetDay(day);
+        SetMonth(month);
+        SetYear(year);
     }
 
-    int getDay() const {
+    int GetDay() const {
         return day;
     }
 
-    void setDay(int day) {
+    void SetDay(int day) {
+        // ... 
         this->day = day;
     }
 
-    int getMonth() const {
+    int GetMonth() const {
         return month;
     }
 
-    void setMonth(int month) {
+    void SetMonth(int month) {
         this->month = month;
     }
 
-    int getYear() const {
+    int GetYear() const {
         return year;
     }
 
-    void setYear(int year) {
+    void SetYear(int year) {
         this->year = year;
     }
 
-    void display() const {
-        printf("%02d.%02d.%04d", day, month, year);
+    void show() const {
+        printf("%02d.%02d.%d", day, month, year);
     }
-
 };
 
 class Time {
 private:
-    int hour;
-    int minute;
+    int hour, minute;
 
 public:
 
@@ -61,26 +62,25 @@ public:
     hour(hour), minute(minute) {
     }
 
-    int getHour() const {
+    int GetHour() const {
         return hour;
     }
 
-    void setHour(int hour) {
+    void SetHour(int hour) {
         this->hour = hour;
     }
 
-    int getMinute() const {
+    int GetMinute() const {
         return minute;
     }
 
-    void setMinute(int minute) {
+    void SetMinute(int minute) {
         this->minute = minute;
     }
 
-    void display() const {
-        printf("%02d:%02d", hour, minute);
+    void show() const {
+        printf("%04d:%02d", hour, minute);
     }
-
 };
 
 class DateTime : public Date, public Time {
@@ -90,10 +90,10 @@ public:
     Date(day, month, year), Time(hour, minute) {
     }
 
-    void display() const {
-        Date::display();
+    void show() const{
+        Date::show();
         cout << " ";
-        Time::display();
+        Time::show();
         cout << endl;
     }
 
@@ -102,13 +102,13 @@ public:
 /*
  * 
  */
-//int main(int argc, char** argv) {
+//int main() {
 //
-//    DateTime dt(18, 4, 2015, 17, 5);
-//    dt.display();
+//    const DateTime dt(18, 4, 2015, 17, 5);
+//    dt.show();
+//
+//    cout << dt.GetDay() << endl;
 //    
-//    //const
-//
 //    return 0;
 //}
 
