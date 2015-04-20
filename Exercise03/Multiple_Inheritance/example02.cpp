@@ -22,28 +22,28 @@ public:
         SetYear(year);
     }
 
-    int GetDay() const {
+    int getDay() const {
         return day;
     }
 
-    void SetDay(int day) {
+    void setDay(int day) {
         // ... 
         this->day = day;
     }
 
-    int GetMonth() const {
+    int getMonth() const {
         return month;
     }
 
-    void SetMonth(int month) {
+    void setMonth(int month) {
         this->month = month;
     }
 
-    int GetYear() const {
+    int getYear() const {
         return year;
     }
 
-    void SetYear(int year) {
+    void setYear(int year) {
         this->year = year;
     }
 
@@ -62,19 +62,19 @@ public:
     hour(hour), minute(minute) {
     }
 
-    int GetHour() const {
+    int getHour() const {
         return hour;
     }
 
-    void SetHour(int hour) {
+    void setHour(int hour) {
         this->hour = hour;
     }
 
-    int GetMinute() const {
+    int getMinute() const {
         return minute;
     }
 
-    void SetMinute(int minute) {
+    void setMinute(int minute) {
         this->minute = minute;
     }
 
@@ -90,7 +90,7 @@ public:
     Date(day, month, year), Time(hour, minute) {
     }
 
-    void show() const{
+    void show() const {
         Date::show();
         cout << " ";
         Time::show();
