@@ -51,14 +51,14 @@ public:
 /*
  * 
  */
-//int main(int argc, char** argv) {
-//
-//    Rectangle rec(2, 6);
-//
-//    cout << rec.getArea() << endl;
-//    cout << rec.getPerimeter() << endl;
-//
-//
-//    return 0;
-//}
+int main(int argc, char** argv) {
+
+    Rectangle rec(2, 6);
+
+    cout << rec.getArea() << endl;
+    cout << rec.getPerimeter() << endl;
+
+
+    return 0;
+}
 

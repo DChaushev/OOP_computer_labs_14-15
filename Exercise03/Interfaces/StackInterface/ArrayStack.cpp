@@ -83,7 +83,7 @@ public:
  * 
  */
 int main(int argc, char** argv) {
-
+    
     Stack * s = new ArrayStack();
 
     for (int i = 0; i < 10; i++) {

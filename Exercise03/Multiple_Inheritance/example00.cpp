@@ -65,7 +65,7 @@ private:
 
 public:
 
-    Student(string name, int fn, double salary, string tech) :
+    Student(string name, double salary, string tech, int fn) :
     Human(name), Programmer(salary, tech), fn(fn) {
     }
 
@@ -82,16 +82,16 @@ public:
 /*
  * 
  */
-//int main(int argc, char** argv) {
-//
-//    Student * s = new Student("Ivan", 61569, 2000.50, "C++");
-//
-//    cout << s->getName() << endl;
-//    cout << s->getFn() << endl;
-//    cout << s->getSalary() << endl;
-//    cout << s->getTech() << endl;
-//
-//
-//    return 0;
-//}
+int main(int argc, char** argv) {
+
+    Student * s = new Student("Ivan", 2000.50, "C++", 61569);
+
+    cout << s->getName() << endl;
+    cout << s->getFn() << endl;
+    cout << s->getSalary() << endl;
+    cout << s->getTech() << endl;
+
+
+    return 0;
+}
 

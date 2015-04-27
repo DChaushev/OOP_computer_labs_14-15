@@ -10,105 +10,114 @@
 
 using namespace std;
 
-class Date {
+class Date{
 private:
     int day, month, year;
-
+    
 public:
-
-    Date(int day, int month, int year) {
-        SetDay(day);
-        SetMonth(month);
-        SetYear(year);
+    
+    Date(){
+        day = 0;
+        month =0;
+        year = 0;
+    }
+    
+    Date(int day, int month, int year) :
+    day(day), month(month), year(year) {
     }
 
-    int getDay() const {
+    int GetDay() const {
         return day;
     }
 
-    void setDay(int day) {
-        // ... 
+    void SetDay(int day) {
         this->day = day;
     }
 
-    int getMonth() const {
+    int GetMonth() const {
         return month;
     }
 
-    void setMonth(int month) {
+    void SetMonth(int month) {
         this->month = month;
     }
 
-    int getYear() const {
+    int GetYear() const {
         return year;
     }
 
-    void setYear(int year) {
+    void SetYear(int year) {
         this->year = year;
     }
-
-    void show() const {
+    
+    void display() const {
         printf("%02d.%02d.%d", day, month, year);
     }
+
 };
 
-class Time {
+class Time{
 private:
     int hour, minute;
-
+    
 public:
+    
+    Time() {
+        hour = 0;
+        minute = 0;      
+    }
 
+    
     Time(int hour, int minute) :
     hour(hour), minute(minute) {
     }
 
-    int getHour() const {
+    int GetHour() const {
         return hour;
     }
 
-    void setHour(int hour) {
+    void SetHour(int hour) {
         this->hour = hour;
     }
 
-    int getMinute() const {
+    int GetMinute() const {
         return minute;
     }
 
-    void setMinute(int minute) {
+    void SetMinute(int minute) {
         this->minute = minute;
     }
-
-    void show() const {
-        printf("%04d:%02d", hour, minute);
+    
+    void display() const {
+        printf("%02d:%02d", hour, minute);
     }
+
 };
 
-class DateTime : public Date, public Time {
+class DateTime : public Date, public Time{
 public:
-
-    DateTime(int day, int month, int year, int hour, int minute) :
-    Date(day, month, year), Time(hour, minute) {
+    DateTime(int day, int month, int year, int hour, int minute)
+    {
+        SetDay(day);
+        SetHour(hour);
     }
 
-    void show() const {
-        Date::show();
+    void display() const {
+        Date::display();
         cout << " ";
-        Time::show();
+        Time::display();
         cout << endl;
     }
-
 };
-
 /*
  * 
  */
-//int main() {
-//
-//    const DateTime dt(18, 4, 2015, 17, 5);
-//    dt.show();
-//
-//    cout << dt.GetDay() << endl;
-//    
-//    return 0;
-//}
+int main() {
+
+    const DateTime dt(18, 4, 2015, 17, 5);
+    dt.display();
+
+    
+    return 0;
+}
 
