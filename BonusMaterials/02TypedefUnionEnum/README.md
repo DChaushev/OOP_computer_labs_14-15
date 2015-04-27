@@ -1,10 +1,9 @@
 Read in the following order:
 
-typedef
-unions
-enums
-taggedUnion
-
+1. typedef
+2. unions
+3. enums
+4. taggedUnion
 
 Links:
 
