@@ -24,3 +24,66 @@ throw std::out_of_range("<human_friendly_message>");
 throw std::invalid_argument("<human_friendly_message>");
 ``` 
  - Има деструктор, който освобождава ресурсите (динамично заделeната памет).
+
+
+За да си тествате задачата използвайте следният скромен main:
+-------
+```{cpp}
+template<class T>
+void testStack(Stack<T> *& stack, int cap = 128) {
+    for (int i = 0; i < 100; i++) {
+        stack->push(i);
+        assert(stack->top() == i);
+    }
+
+    assert(stack->getCapacity() == cap);
+    assert(stack->getSize() == 100);
+
+
+    for (int i = 99; i >= 0; i--) {
+        assert(stack->top() == i);
+        stack->pop();
+    }
+    assert(stack->getCapacity() == 4);
+    assert(stack->isEmpty());
+
+}
+
+int main() {
+
+    try {
+
+        Stack<int> * stackI = new ArrayStack<int>();
+        testStack(stackI);
+        delete stackI;
+
+        Stack<float> * stackF = new ArrayStack<float>(1);
+        testStack(stackF);
+        delete stackF;
+
+        Stack<double> * stackD = new ArrayStack<double>(65536);
+        testStack(stackD, 65536);
+        delete stackD;
+
+        Stack<string> * stackS = new ArrayStack<string>();
+        stackS->push("string1");
+        stackS->push("string2");
+        stackS->push("string3");
+        stackS->push("string4");
+
+        for (int i = 0; i < 4; i++) {
+            stackS->pop();
+        }
+        assert(stackS->isEmpty());
+
+        cout << "All tests passed!" << endl;
+
+    } catch (std::exception & ex) {
+        cout << ex.what() << endl;
+    }
+
+    return 0;
+}
+```
+
+Щом видите надписа ___"All tests passed!"___, чак тогава може би решението ви е вярно.
