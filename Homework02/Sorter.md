@@ -13,7 +13,7 @@ public:
 Kъдето ___a[]___ е масив от тип ___T___, а ___n___ е броя на елементите в този масив.
 
 Имплементирайте метода ___sort___ да сортира масив чрез:
-* ___selection sort___ (http://en.wikipedia.org/wiki/Selection_sort)
+* ___selection sort___ (http://en.wikipedia.org/wiki/Selection_sort )
 
  или
 
