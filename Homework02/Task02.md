@@ -33,6 +33,8 @@ throw std::invalid_argument("<human_friendly_message>");
 #include <assert.h>
 #include <string>
 
+using namespace std;
+
 template<class T>
 void testStack(Stack<T> *& stack, int cap = 128) {
     for (int i = 0; i < 100; i++) {
