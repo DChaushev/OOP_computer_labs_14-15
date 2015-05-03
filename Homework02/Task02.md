@@ -29,6 +29,10 @@ throw std::invalid_argument("<human_friendly_message>");
 За да си тествате задачата използвайте следният скромен main:
 -------
 ```{cpp}
+
+#include <assert.h>
+#include <string>
+
 template<class T>
 void testStack(Stack<T> *& stack, int cap = 128) {
     for (int i = 0; i < 100; i++) {
