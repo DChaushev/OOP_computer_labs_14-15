@@ -34,17 +34,6 @@ public:
 };
 
 
-template <int N> struct Factorial
-{
-    enum { val = Factorial<N-1>::val * N };
-};
-
-template<>
-struct Factorial<0>
-{
-    enum { val = 1 };
-};
-
 // Explicitly instantiate the template class with the parameters
 // This instantiates ALL METHODS!
 //template class TemplateCalculator<int, 0>;
@@ -77,10 +66,6 @@ int main(int argc, char** argv)
     see above the top of main for syntax.
     */
     //cout << "normal: 6 * " << NonTemplateCalculator::MULT_DIV_CONST << " = " << norm_calc.divide(6) << endl;
-
-    // Note this value is generated at compile time.
-    // Also note that most compilers have a limit on the depth of the recursion available.
-    std::cout << Factorial<4>::val << "\n";
 
     return 0;
 }
