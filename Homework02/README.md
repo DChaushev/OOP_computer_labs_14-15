@@ -7,3 +7,4 @@
 ####[Задача 1](https://github.com/DChaushev/OOP_computer_labs_14-15/tree/master/Homework02/Task01.md)####
 ####[Задача 2](https://github.com/DChaushev/OOP_computer_labs_14-15/tree/master/Homework02/Task02.md)####
 **Предавайте всички изходни файлове в zip архив като спазвате условията за именуване посочени в мудъл-а!**
+### Внимавайте! Задачите трябва да се компилират и на различен от компилатора на Visual Studio! ###
