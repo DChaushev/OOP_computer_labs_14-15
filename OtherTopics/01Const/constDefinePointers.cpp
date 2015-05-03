@@ -180,34 +180,3 @@ class TooMuchConst
 
 // C++ allows you to overload based on the const-ness of a method.
 // You can have both const and non-const methods, and the correct version will be called.
-
-
-/*
-    SOME USEFUL LINKS:
-
-    Preprocessor directives:
-        http://www.cplusplus.com/doc/tutorial/preprocessor/
-        https://msdn.microsoft.com/en-us/library/3sxhs2ty.aspx
-
-    pointers:
-        http://www.cplusplus.com/doc/tutorial/pointers/
-
-    function pointers:
-        http://www.cprogramming.com/tutorial/function-pointers.html
-        http://www.learncpp.com/cpp-tutorial/78-function-pointers/
-
-    dynamic memory:
-        http://www.cplusplus.com/doc/tutorial/dynamic/
-
-    const:
-        http://duramecho.com/ComputerInformation/WhyHowCppConst.html
-        http://www.cprogramming.com/tutorial/const_correctness.html
-
-    char[] vs std::string
-        http://stackoverflow.com/questions/1764079/why-do-you-prefer-char-instead-of-string-in-c
-        http://stackoverflow.com/questions/1287306/difference-between-string-and-char-types-in-c
-
-    RVO - the only compiler optimization allowed by the C++ standart
-    that can brake your program (change it's observable behaviour)
-        http://en.wikipedia.org/wiki/Return_value_optimization
-*/
