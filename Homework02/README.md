@@ -1,0 +1,8 @@
+#Домашно 2#
+#####СИ ООП практикум 14-15, групи 3 и 5#####
+####Срок до 13.05.2015 23:55 UTC+3####
+#####**След това формата в мудъл се затваря и няма да бъдат приемани повече домашни!**#####
+**Трябва да направите и трите задачи:**
+####[Задача 1](https://github.com/DChaushev/OOP_computer_labs_14-15/tree/master/Homework02/Task01.md)####
+####[Задача 2](https://github.com/DChaushev/OOP_computer_labs_14-15/tree/master/Homework02/Task02.md)####
+####[Задача 2](https://github.com/DChaushev/OOP_computer_labs_14-15/tree/master/Homework02/Task03.md)####
