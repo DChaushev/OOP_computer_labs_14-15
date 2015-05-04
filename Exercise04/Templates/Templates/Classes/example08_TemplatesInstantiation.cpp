@@ -36,7 +36,6 @@ public:
 
 // Explicitly instantiate the template class with the parameters
 // This instantiates ALL METHODS!
-<<<<<<< HEAD
 template class TemplateCalculator<int, 0>;
 
 //int main(int argc, char** argv)
@@ -108,4 +107,3 @@ int main(int argc, char** argv)
 
     return 0;
 }
->>>>>>> remotes/origin/master
