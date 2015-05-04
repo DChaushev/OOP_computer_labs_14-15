@@ -15,7 +15,7 @@ using namespace std;
  * 
  * N can also have default value.
  */
-template<typename T, int N = 5 >
+template<typename T, int N = 1 >
 T multiply(T x) {
     return x * N;
 }
@@ -28,15 +28,15 @@ T divide(T x) {
 /*
  * 
  */
-int main() {
-
-    cout << multiply<int, 5>(10) << endl;
-    cout << multiply<double, 5>(1.5) << endl;
-
-    // When the template first takes the particular type, you can skip the
-    // explicit type declaration:
-    cout << divide<5>(10) << endl;
-
-    return 0;
-}
+//int main() {
+//
+//    cout << multiply<int, 5>(10) << endl;
+//    cout << multiply<double, 5>(1.5) << endl;
+//
+//    // When the template first takes the particular type, you can skip the
+//    // explicit type declaration:
+//    cout << divide<5>(10) << endl;
+//
+//    return 0;
+//}
 

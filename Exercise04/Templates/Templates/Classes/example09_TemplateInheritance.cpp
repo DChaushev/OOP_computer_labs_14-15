@@ -50,16 +50,16 @@ public:
 /*
  * 
  */
-int main() {
-
-    Number<int> * c = new PositiveNumber<int>(6);
-
-    cout << c->getValue() << endl;
-
-    c->setValue(-8);
-
-    cout << c->getValue() << endl;
-
-    return 0;
-}
+//int main() {
+//
+//    Number<int> * c = new PositiveNumber<int>(6);
+//
+//    cout << c->getValue() << endl;
+//
+//    c->setValue(-8);
+//
+//    cout << c->getValue() << endl;
+//
+//    return 0;
+//}
 

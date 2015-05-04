@@ -64,20 +64,20 @@ void print(const T a[], int n) {
 /*
  * 
  */
-int main() {
-
-    int a[] = {1, 2, 3, 4, 5};
-    double d[] = {1.23, 5.21, 6.23, 7.23};
-
-
-    printArray(a, 5);
-    printArray(d, 4);
-
-    print(a, 5);
-    print(d, 4);
-
-    return 0;
-}
+//int main() {
+//
+//    int a[] = {1, 2, 3, 4, 5};
+//    double d[] = {1.23, 5.21, 6.23, 7.23};
+//
+//
+////    printArray(a, 5);
+////    printArray(d, 4);
+//
+//    print(a, 5);
+//    print(d, 4);
+//
+//    return 0;
+//}
 
 
 

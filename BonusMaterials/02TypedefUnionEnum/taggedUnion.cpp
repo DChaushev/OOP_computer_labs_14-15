@@ -27,13 +27,13 @@ void print_s(const S& s)
     }
 }
 
-int main()
-{
-    S s = {S::CHAR, 'a'};
-    print_s(s);
-
-    s.tag = S::INT;
-    s.n = 123;
-
-    print_s(s);
-}
+//int main()
+//{
+//    S s = {S::CHAR, 'a'};
+//    print_s(s);
+//
+//    s.tag = S::INT;
+//    s.n = 123;
+//
+//    print_s(s);
+//}

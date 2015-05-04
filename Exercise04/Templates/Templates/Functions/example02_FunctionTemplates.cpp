@@ -12,7 +12,7 @@ using namespace std;
 /*
  * Templates can also have multiple template parameters.
  */
-template <typename T, typename U>
+template <typename T = int, typename U>
 bool areEqual(T a, U b) {
     return (a == b);
 }
@@ -20,14 +20,14 @@ bool areEqual(T a, U b) {
 /*
  * 
  */
-int main() {
-
-    cout << areEqual(10, 10.0) << endl;
-
-    //It is not necessary T and U to be from different types:
-    int a = 5, b = 5;
-    cout << areEqual(a, b) << endl;
-
-    return 0;
-}
+//int main() {
+//
+//    cout << areEqual(10, 10.0) << endl;
+//
+//    //It is not necessary T and U to be from different types:
+//    int a = 5, b = 5;
+//    cout << areEqual(a, b) << endl;
+//
+//    return 0;
+//}
 

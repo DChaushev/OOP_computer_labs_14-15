@@ -56,24 +56,24 @@ public:
         int member_of_NONanon_union;
     } NON_anon_union;
 };
-
-int main(int argc, char** argv)
-{
-    mix_t mix;
-    mix.uint = 67305985; // 00000100 00000011 00000010 00000001
-    // Little endian system - low = 1027 (00000100 00000011); high = 513 (00000010 00000001)
-    std::cout << "shorts.low: " << mix.shorts.low << "; shorts.high: " << mix.shorts.high << std::endl;
-    std::cout << "Bytes cast to int: [0]: " << (int)mix.bytes[0] << "; [1]: " << (int)mix.bytes[1] <<
-        "; [2]: " << (int)mix.bytes[2] << "; [3]: " << (int)mix.bytes[3] << std::endl;
-
-
-    ClassWithAnonymousUnionMember obj;
-    obj.member_of_class = 5;
-
-    // The following two share the same memory!
-    obj.member_of_anon_union = 5;
-    std::cout << obj.another_member_of_anon_union;
-
-    // The members of the normal (non-anonymous) union are used by its name
-    obj.NON_anon_union.member_of_NONanon_union = 5;
-}
+//
+//int main(int argc, char** argv)
+//{
+//    mix_t mix;
+//    mix.uint = 67305985; // 00000100 00000011 00000010 00000001
+//    //Little endian system - low = 1027 (00000100 00000011); high = 513 (00000010 00000001)
+//    std::cout << "shorts.low: " << mix.shorts.low << "; shorts.high: " << mix.shorts.high << std::endl;
+//    std::cout << "Bytes cast to int: [0]: " << (int)mix.bytes[0] << "; [1]: " << (int)mix.bytes[1] <<
+//        "; [2]: " << (int)mix.bytes[2] << "; [3]: " << (int)mix.bytes[3] << std::endl;
+//
+//
+//    ClassWithAnonymousUnionMember obj;
+//    obj.member_of_class = 5;
+//
+//    // The following two share the same memory!
+//    obj.member_of_anon_union = 5;
+//    std::cout << obj.another_member_of_anon_union;
+//
+//    // The members of the normal (non-anonymous) union are used by its name
+//    obj.NON_anon_union.member_of_NONanon_union = 5;
+//}

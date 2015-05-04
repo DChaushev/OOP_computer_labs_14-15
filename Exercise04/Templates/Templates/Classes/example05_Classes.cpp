@@ -43,18 +43,18 @@ public:
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    Pair<int>* p = new Pair<int>(1, 2);
-
-    Pair<int> pInt(1, 2);
-    Pair<double> pDouble(1.65, 2.35);
-    Pair<string> pStr("ivan", "pesho");
-
-    cout << pInt.getFirst() << endl;
-
-    cout << pStr.getSecond() << endl;
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//    
+//    Pair<int>* p = new Pair<int>(1, 2);
+//    
+//    Pair<int> pInt(1, 2);
+//    Pair<double> pDouble(1.65, 2.35);
+//    Pair<string> pStr("ivan", "pesho");
+//
+//    cout << pInt.getFirst() << endl;
+//
+//    cout << pStr.getSecond() << endl;
+//
+//    return 0;
+//}
 

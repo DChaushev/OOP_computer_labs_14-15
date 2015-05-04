@@ -40,7 +40,7 @@ public:
     Container(char c) : element(c) {
     }
 
-    char uppercase() {
+    char increase() {
         if (element >= 'a' && element <= 'z')
             element += 'A' - 'a';
         return element;
@@ -51,25 +51,25 @@ public:
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    Container<int> cInt(1);
-    cout << cInt.increase() << endl;
-    cout << cInt.increase() << endl;
-    cout << cInt.increase() << endl;
-
-    cout << endl;
-
-    Container<double> cDouble(1.5);
-    cout << cDouble.increase() << endl;
-    cout << cDouble.increase() << endl;
-    cout << cDouble.increase() << endl;
-
-    cout << endl;
-
-    Container<char> cChar('c');
-    cout << cChar.uppercase() << endl;
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//
+//    Container<int> cInt(1);
+//    cout << cInt.increase() << endl;
+//    cout << cInt.increase() << endl;
+//    cout << cInt.increase() << endl;
+//
+//    cout << endl;
+//
+//    Container<double> cDouble(1.5);
+//    cout << cDouble.increase() << endl;
+//    cout << cDouble.increase() << endl;
+//    cout << cDouble.increase() << endl;
+//
+//    cout << endl;
+//
+//    Container<char> cChar('c');
+//    cout << cChar.increase() << endl;
+//
+//    return 0;
+//}
 

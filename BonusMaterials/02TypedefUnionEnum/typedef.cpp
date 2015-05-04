@@ -42,26 +42,27 @@ using SpecialClass = MyClassWithNeedleslyLongNameThatIsNotVeryFriendly;
     (or some other type) in a later version, without having to change every instance where it is used.
 */
 
-template <typename T> class TemplateClassLongName{};
+template <typename T>
+class TemplateClassLongName{};
 
 //using with templates
 template <typename T> using MyType = TemplateClassLongName<T>;
-
-int main(int argc, char** argv)
-{
-    TemplateClassLongName<int> templOrig;
-    MyType<int> templAlias;
-
-    const std::type_info& tiOrig = typeid(templOrig);
-    const std::type_info& tiAlias = typeid(templAlias);
-
-    std::cout << "Are types and there aliases equal: " <<
-        (std::type_index(tiOrig) == std::type_index(tiAlias)) << std::endl;
-
-    SpecialClass obj;
-    pChar p = "Gosho";
-    field f = "Pesho";
-    WORD w = 123456789;
-
-    std::cout << "pChar p: '" << p << "'; field f: '" << f << "'; WORD w: '" << w << "'" << std::endl;
-}
+//
+//int main(int argc, char** argv)
+//{
+//    TemplateClassLongName<int> templOrig;
+//    MyType<int> templAlias;
+//
+//    const std::type_info& tiOrig = typeid(templOrig);
+//    const std::type_info& tiAlias = typeid(templAlias);
+//
+//    std::cout << "Are types and there aliases equal: " <<
+//        (std::type_index(tiOrig) == std::type_index(tiAlias)) << std::endl;
+//
+//    SpecialClass obj;
+//    pChar p = "Gosho";
+//    field f = "Pesho";
+//    WORD w = 123456789;
+//
+//    std::cout << "pChar p: '" << p << "'; field f: '" << f << "'; WORD w: '" << w << "'" << std::endl;
+//}

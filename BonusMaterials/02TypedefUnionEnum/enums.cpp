@@ -33,39 +33,40 @@
     };
 
 
-int main(int argc, char** argv)
-{
-    enum colors {red, green, blue, white, black, yellow, purple, orange, brown, grey};
-    colors r = red;
-    colors g = green;
-    // Only colors x = 5; wasn't likes by my compiler - try it with yours
-    colors x = (colors)5;
-    std::cout << std::boolalpha << "Is x == 5: " << (x == 5) << std::endl;
-
-    // A better way to specify enums values - always prefer it!
-    colors better = colors::white;
-
-    std::cout << "Which color is x: " << x << "; Maybe this will work: " << (colors)x << std::endl;
-
-    // enums are constants - usually the values are written UPPER_CASE
-    enum Colors {RED = 5, GREEN = 8, BLUE};
-    Colors col_red = Colors::RED;
-    Colors col_green = Colors::GREEN;
-    Colors col_blue = Colors::BLUE;
-    std::cout << "Is col1 == RED: " << (col_red == Colors::RED) << "; green (=8): " <<
-        col_green << "; blue (no expl. int specified): " << col_blue << std::endl;
-
-
-    /*
-    // C++11
-    Month m1 = Month::MAY;
-    // No implicit conversion
-    //short s = m1;
-    short sVal = static_cast<short>(m1);
-    std::cout << "m1 short value (with EXPLICIT cast): " << sVal << std::endl;
-
-    std::cout << "sizeof(Month): " << sizeof(Month) << std::endl;
-    std::cout << "sizeof(m1): " << sizeof(m1) << std::endl;
-    */
-}
+//int main(int argc, char** argv)
+//{
+//    /*
+//    enum colors {red, green, blue, white, black, yellow, purple, orange, brown, grey};
+//    colors r = red;
+//    colors g = green;
+//    // Only colors x = 5; wasn't likes by my compiler - try it with yours
+//    colors x = (colors)5;
+//    std::cout << std::boolalpha << "Is x == 5: " << (x == 5) << std::endl;
+//
+//    // A better way to specify enums values - always prefer it!
+//    colors better = colors::white;
+//
+//    std::cout << "Which color is x: " << x << "; Maybe this will work: " << (colors)x << std::endl;
+//
+//    // enums are constants - usually the values are written UPPER_CASE
+//    enum Colors {RED = 5, GREEN = 8, BLUE};
+//    Colors col_red = Colors::RED;
+//    Colors col_green = Colors::GREEN;
+//    Colors col_blue = Colors::BLUE;
+//    std::cout << "Is col1 == RED: " << (col_red == Colors::RED) << "; green (=8): " <<
+//        col_green << "; blue (no expl. int specified): " << col_blue << std::endl;
+//
+//*/
+//    
+//    // C++11
+//    Month m1 = Month::MAY;
+//    // No implicit conversion
+//    //short s = m1;
+//    short sVal = (short)(m1);
+//    std::cout << "m1 short value (with EXPLICIT cast): " << sVal << std::endl;
+//
+//    std::cout << "sizeof(Month): " << sizeof(Month) << std::endl;
+//    std::cout << "sizeof(m1): " << sizeof(m1) << std::endl;
+//    
+//}
 

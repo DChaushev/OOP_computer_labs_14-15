@@ -49,13 +49,13 @@ bool Foo<T>::Bar(U other) {
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    Foo<int> c(10);
-
-    cout << c.Bar(10.5) << endl;
-    cout << c.Bar(10) << endl;
-
-    return 0;
-}
-
+//int main(int argc, char** argv) {
+//
+//    Foo<int> c(10);
+//
+//    cout << c.Bar(10.5) << endl;
+//    cout << c.Bar(10) << endl;
+//
+//    return 0;
+//}
+//
