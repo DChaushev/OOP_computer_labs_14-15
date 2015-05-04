@@ -1,4 +1,4 @@
-Task01
+Task 1
 ==============
 
 Напишете клас ___MySorter___, който имплементира дадения интерфейс:
@@ -21,3 +21,56 @@ Kъдето ___a[]___ е масив от тип ___T___, а ___n___ е броя�
  или
 
 * ___bubble sort___ ( http://en.wikipedia.org/wiki/Bubble_sort )
+
+
+За да тествате задачата използвайте следния main:
+----------
+```{cpp}
+#include <algorithm>
+#include <string>
+#include <assert.h>
+
+using namespace std;
+
+int main() {
+
+    int intArray[] = {1, 6, 7, 2, -10, 6, 2, 4, 8};
+    float floatArray[] = {1.6, 7.6, 9.8, -5.4, -4.2};
+    string stringArray[] = {"isdgn", "ghdf", "ghdx", "qasdni", "asdf"};
+
+    int intArrayTest[] = {1, 6, 7, 2, -10, 6, 2, 4, 8};
+    float floatArrayTest[] = {1.6, 7.6, 9.8, -5.4, -4.2};
+    string stringArrayTest[] = {"isdgn", "ghdf", "ghdx", "qasdni", "asdf"};
+
+    Sorter<int> * sInt = new SelectionSorter<int>();
+    Sorter<float> * sFloat = new SelectionSorter<float>();
+    Sorter<string> * sString = new SelectionSorter<string>();
+
+    sInt->sort(intArray, 9);
+    sFloat->sort(floatArray, 5, true);
+    sString->sort(stringArray, 5);
+
+    std::sort(intArrayTest, intArrayTest + 9);
+    std::sort(floatArrayTest, floatArrayTest + 5, std::greater<float>());
+    std::sort(stringArrayTest, stringArrayTest + 5);
+    
+    for(int i = 0; i < 9; i++){
+        assert(intArray[i] == intArrayTest[i]);
+    }
+    
+    for(int i = 0; i < 5; i++){
+        assert(floatArray[i] == floatArrayTest[i]);
+    }
+    
+    for(int i = 0; i < 5; i++){
+        assert(stringArray[i] == stringArrayTest[i]);
+    }
+
+    cout << "All tests passed!" << endl;
+
+    return 0;
+}
+```
+
+Щом видите надписа ___"All tests passed!"___, чак тогава може би решението ви е вярно.
+
