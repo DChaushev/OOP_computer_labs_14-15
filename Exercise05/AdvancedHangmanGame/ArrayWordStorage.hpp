@@ -18,14 +18,8 @@ public:
 
 
 private:
-    const int NUMBER_OF_WORDS = 5;
-    const std::string words[NUMBER_OF_WORDS] = {
-        "programming",
-        "mathematics",
-        "discrete",
-        "analysis",
-        "faculty"
-    };
+    int NUMBER_OF_WORDS;
+    std::string * words;
 };
 
 #endif	/* ARRAYWORDSTORAGE_HPP */

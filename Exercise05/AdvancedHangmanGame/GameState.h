@@ -16,7 +16,7 @@ struct GameState {
     std::vector<char> usedLetters;
 
     int wrongAttempts;
-    
+
     bool win;
     bool lose;
 };

@@ -10,6 +10,14 @@
 #include "ArrayWordStorage.hpp"
 
 ArrayWordStorage::ArrayWordStorage() {
+    NUMBER_OF_WORDS = 5;
+    words = new std::string[NUMBER_OF_WORDS]{
+        "programming",
+        "mathematics",
+        "discrete",
+        "analysis",
+        "faculty"
+    };
 }
 
 std::string ArrayWordStorage::getWord() {

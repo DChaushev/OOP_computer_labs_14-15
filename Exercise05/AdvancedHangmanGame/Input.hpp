@@ -9,6 +9,7 @@
 #define	INPUT_HPP
 
 class Input {
+public:
     virtual char getInput() = 0;
 };
 
