@@ -18,4 +18,6 @@ public:
     virtual int getCapacity() = 0;
     // Returns true if the stack has no elements and false otherwise
     virtual bool isEmpty() = 0;
+    // So we can delete objects of derived classes (implementations) just through the pointer to Stack
+    virtual ~Stack(){};
 };
