@@ -43,9 +43,9 @@ int main() {
     float floatArrayTest[] = {1.6, 7.6, 9.8, -5.4, -4.2};
     string stringArrayTest[] = {"isdgn", "ghdf", "ghdx", "qasdni", "asdf"};
 
-    Sorter<int> * sInt = new SelectionSorter<int>();
-    Sorter<float> * sFloat = new SelectionSorter<float>();
-    Sorter<string> * sString = new SelectionSorter<string>();
+    Sorter<int> * sInt = new MySorter<int>();
+    Sorter<float> * sFloat = new MySorter<float>();
+    Sorter<string> * sString = new MySorter<string>();
 
     sInt->sort(intArray, 9);
     sFloat->sort(floatArray, 5, true);
