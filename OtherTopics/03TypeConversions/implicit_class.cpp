@@ -7,6 +7,17 @@
     Circle baz {30.0};   // uniform init.
     Circle qux = {40.0}; // POD-like
 
+    An advantage of uniform initialization over functional form
+    is that, unlike parentheses, braces cannot be confused with
+    function declarations, and thus can be used to explicitly call default constructors:
+
+        Rectangle rectb;   // default constructor called
+        Rectangle rectc(); // function declaration (default constructor NOT called)
+        Rectangle rectd{}; // default constructor called
+
+
+    Now, about type conversions:
+
     In classes, implicit conv. are controlled with 3 member functions:
 
     - Single-argument constructors:

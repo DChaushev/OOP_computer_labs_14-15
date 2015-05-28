@@ -26,6 +26,7 @@ void print(char * str)
 
     'mutable' is the reverse hack - const methods that want to
     still change something (but not observable outside of class)
+    typeid
 */
 
 /*
