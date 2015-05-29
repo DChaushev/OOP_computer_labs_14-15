@@ -4,13 +4,14 @@
  * 
  * Created on May 8, 2015, 10:51 AM
  */
-
+#include <iostream>
 #include "Game.hpp"
 
 Game::Game(WordStorage * ws, Output * gout, Input * gin) :
 wordStorage(ws), gameOutput(gout), gameInput(gin) {
 
     word = wordStorage->getWord();
+
     char first = word[0];
     char last = word[word.length() - 1];
 
@@ -45,9 +46,9 @@ void Game::start() {
 
         checkState();
     }
-    
+
     gameOutput->display(gameState);
-    
+
 }
 
 void Game::checkLetter(char letter) {
@@ -60,8 +61,6 @@ void Game::checkLetter(char letter) {
         gameState.wrongAttempts++;
     }
     gameState.usedLetters.push_back(letter);
-
-
 }
 
 bool Game::used(char letter) {

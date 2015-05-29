@@ -79,7 +79,7 @@ public:
   B& operator= (const A& x) {return *this;}
   // conversion to A (type-cast operator)
   operator A() {return A();}
-  //explicit operator C() {return C();};
+  explicit operator C() {return C();};
 };
 
 void fn (B arg) {}
@@ -103,7 +103,7 @@ int main ()
 
   //C c1 = bar;
 
-  C c2 = (C)bar;
+  //C c2 = (C)bar;
 
   return 0;
 }

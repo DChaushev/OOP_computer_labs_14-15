@@ -17,8 +17,8 @@
     (not only those with pointers to classes), and is also able to perform
     the opposite of these.
 
-    It can:
-
+    It can:  
+    
     Convert from void* to any pointer type.
         In this case, it guarantees that if the void* value was obtained by
         converting from that same pointer type, the resulting pointer value is the same.

@@ -26,3 +26,5 @@
 *.exe
 *.out
 *.app
+/Exceptions_java/nbproject/private/
+/Exceptions_java/build/

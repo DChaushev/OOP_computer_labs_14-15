@@ -47,8 +47,6 @@ class Derived: public Base
 /*
 int main ()
 {
-    try
-    {
         Base * ptr_base1 = new Derived;
         Base * ptr_base2 = new Base;
         Derived * ptr_der;
@@ -61,15 +59,16 @@ int main ()
 
         // Null pointer on this type-cast.
         ptr_der = dynamic_cast<Derived*>(ptr_base2);
-        if (ptr_der == 0)
+        if (ptr_der == NULL)
         {
             cout << "Null pointer on second type-cast."<<endl;
         }
-
+    
+    try
+    {
         Base & base_ref = *ptr_base2; // Base object
         // P.s. References should be initialised always
         Derived & der_ref = dynamic_cast<Derived&>(base_ref);
-
     }
     catch (exception& e)
     {

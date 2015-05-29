@@ -29,7 +29,7 @@ void GameOutput::display(const GameState& gameState) {
     }
     cout << endl;
 
-    cout << "Remaining attempts: " << gameState.remainingAttempts << endl;
+    cout << "Remaining wrong attempts: " << gameState.remainingAttempts << endl;
 
     cout << "Used Letters: ";
 

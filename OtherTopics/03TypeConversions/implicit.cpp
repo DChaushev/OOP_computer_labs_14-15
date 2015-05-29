@@ -74,7 +74,7 @@ int main()
     bool true_b = true, false_b = false;
     int int_true = true_b;
     //int * false_ptr = false_b;
-    int * false_ptr = false;
+    //int * false_ptr = false;
     int * int_ptr = nullptr;
     bool null_b = int_ptr;
 

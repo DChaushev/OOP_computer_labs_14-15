@@ -6,6 +6,8 @@
  */
 
 #include <cstdlib>
+#include <iostream>
+#include <stdexcept>
 
 #include "WordStorage.hpp"
 #include "ArrayWordStorage.hpp"
@@ -14,6 +16,7 @@
 #include "Output.hpp"
 #include "GameOutput.hpp"
 #include "Game.hpp"
+#include "FilesWordStorage.hpp"
 
 using namespace std;
 
@@ -22,14 +25,20 @@ using namespace std;
  */
 int main() {
 
-    WordStorage * storage = new ArrayWordStorage();
-    Input * input = new GameInput();
-    Output * output = new GameOutput();
-    
-    Game * game = new Game(storage, output, input);
+    try {
 
-    game->start();
-    
+        //WordStorage * storage = new ArrayWordStorage();
+        WordStorage * storage = new FilesWordStorage("words");
+        Input * input = new GameInput();
+        Output * output = new GameOutput();
+
+        Game * game = new Game(storage, output, input);
+        game->start();
+
+    } catch (invalid_argument& ex) {
+        cout << ex.what() << endl;
+    }
+
     return 0;
 }
 

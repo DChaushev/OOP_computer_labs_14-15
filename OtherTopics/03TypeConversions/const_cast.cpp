@@ -34,6 +34,7 @@ int main ()
 {
     const char * c = "sample text";
     print (const_cast<char*>(c));
+    cout<<c<<'\n';
 
     return 0;
 }
